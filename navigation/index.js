@@ -1,7 +1,9 @@
 import * as React from 'react';
-import { Text, View } from 'react-native';
+import { Text, View, Image } from 'react-native';
 import { createMaterialBottomTabNavigator } from '@react-navigation/material-bottom-tabs';
 import { MaterialCommunityIcons } from '@expo/vector-icons';
+import circlePlusIcon from '../assets/plus-circle.png';
+import  ProductComponent  from '../components/Product.component';
 
 function Feed() {
   return (
@@ -39,32 +41,53 @@ BottomNavigation = () => {
       barStyle={{ backgroundColor: '#ffffff' }}
     >
       <Tab.Screen
-        name="Feed"
+        name="Home"
         component={Feed}
         options={{
-          tabBarLabel: 'Home',
+          tabBarLabel: '',
           tabBarIcon: ({ color }) => (
-            <MaterialCommunityIcons name="home" color={color} size={26} />
+            <MaterialCommunityIcons name="home-outline" color={color} size={26} />
           ),
         }}
       />
       <Tab.Screen
-        name="Notifications"
+        name="Shopping"
+        component={ProductComponent}
+        options={{
+          tabBarLabel: '',
+          tabBarIcon: ({ color }) => (
+            <MaterialCommunityIcons name="shopping" color={color} size={26} />
+          ),
+        }}
+      />
+      <Tab.Screen
+        name="CirclePlus"
         component={Notifications}
         options={{
-          tabBarLabel: 'Updates',
+          tabBarLabel: '',
           tabBarIcon: ({ color }) => (
-            <MaterialCommunityIcons name="bell" color={color} size={26} />
+            // <MaterialCommunityIcons color={color} size={30} name = "plus-circle-outline"/>
+            <Image source = {circlePlusIcon} style = {{width: 50, height: 50, marginTop: -10}} />
           ),
         }}
       />
       <Tab.Screen
-        name="Profile"
+        name="Cart"
+        component={Notifications}
+        options={{
+          tabBarLabel: '',
+          tabBarIcon: ({ color }) => (
+            <MaterialCommunityIcons name="cart-outline" color={color} size={26} />
+          ),
+        }}
+      />
+      <Tab.Screen
+        name="Account"
         component={Profile}
         options={{
-          tabBarLabel: 'Profile',
+          tabBarLabel: '',
           tabBarIcon: ({ color }) => (
-            <MaterialCommunityIcons name="account" color={color} size={26} />
+            <MaterialCommunityIcons name="account-outline" color={color} size={26} />
           ),
         }}
       />
