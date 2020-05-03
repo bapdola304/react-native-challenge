@@ -4,6 +4,7 @@ import { createMaterialBottomTabNavigator } from '@react-navigation/material-bot
 import { MaterialCommunityIcons } from '@expo/vector-icons';
 import circlePlusIcon from '../assets/plus-circle.png';
 import  ProductComponent  from '../components/Product.component';
+import OrderComponent from '../components/Order/Order.component';
 
 function Feed() {
   return (
@@ -34,7 +35,7 @@ const Tab = createMaterialBottomTabNavigator();
 BottomNavigation = () => {
   return (
     <Tab.Navigator
-      initialRouteName="Feed"
+      initialRouteName="Shopping"
       activeColor="#5860ef"
       labelStyle={{ fontSize: 12 }}
       inactiveColor="#bfcad9"
@@ -73,7 +74,7 @@ BottomNavigation = () => {
       />
       <Tab.Screen
         name="Cart"
-        component={Notifications}
+        component={OrderComponent}
         options={{
           tabBarLabel: '',
           tabBarIcon: ({ color }) => (
