@@ -37,9 +37,7 @@ class ProductComponent extends Component {
         );
     };
 
-    renderPagerImage = (info) => {
-        console.log(info);
-        
+    renderPagerImage = (info) => {    
         return (
             <View style={styles.wrapImage} key = {info.item.id}>
                 <Image source={info.item.image} style={styles.image} />

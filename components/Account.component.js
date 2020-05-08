@@ -55,7 +55,7 @@ class AccountComponent extends Component {
           </View>
           <View style={styles.header}>
             <View>
-              <Text style={{ fontSize: 28, fontWeight: 'bold' }}>Rainie</Text>
+              <Text style={{ fontSize: 28, fontWeight: 'bold' }}>Hưng</Text>
               <View style={styles.wrapRole}>
                 <View style={styles.crown}>
                   <FontAwesome5 name="crown" size={16} color="white" />
@@ -117,7 +117,7 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     alignItems: 'center',
     justifyContent: 'center',
-    marginLeft: -10
+    marginLeft: -15
   },
   roleText: {
     color: 'white',
