@@ -5,19 +5,12 @@ import { MaterialCommunityIcons } from '@expo/vector-icons';
 import circlePlusIcon from '../assets/plus-circle.png';
 import  ProductComponent  from '../components/Product.component';
 import OrderComponent from '../components/Order/Order.component';
+import AccountComponent from '../components/Account.component';
 
 function Feed() {
   return (
     <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
-      <Text>Feed!</Text>
-    </View>
-  );
-}
-
-function Profile() {
-  return (
-    <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
-      <Text>Profile!</Text>
+      <Text>Home!</Text>
     </View>
   );
 }
@@ -35,7 +28,7 @@ const Tab = createMaterialBottomTabNavigator();
 BottomNavigation = () => {
   return (
     <Tab.Navigator
-      initialRouteName="Shopping"
+      initialRouteName="Account"
       activeColor="#5860ef"
       labelStyle={{ fontSize: 12 }}
       inactiveColor="#bfcad9"
@@ -84,7 +77,7 @@ BottomNavigation = () => {
       />
       <Tab.Screen
         name="Account"
-        component={Profile}
+        component={AccountComponent}
         options={{
           tabBarLabel: '',
           tabBarIcon: ({ color }) => (
